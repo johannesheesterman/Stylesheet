@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Elfsquad stylesheet showcases</title>
+    <link rel="stylesheet" href="stylesheet.css">
+
+    <style>
+        :root{
+            --primary-color: #3949ab;
+            --accent-color: coral;
+
+            --primary-font-color: #ffffff;
+            --accent-font-color: #000000;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+    </style>
+    
+</head>
+<body>
+
+    <h2>Input fields</h2>
+
+    <label>Primary color
+        <div class="elf-input-group">
+            <input type="color">
+        </div> 
+    </label>
+
+    <label>Accent color
+        <div class="elf-input-group">
+            <input type="color">
+        </div> 
+    </label>
+
+    <br />
+    <br />
+
+
+
+    <div class="elf-input-group">
+        <label class="elf-input-prefix">
+            $
+        </label>
+        <input type="number" placeholder="Enter value">
+        <label class="elf-input-suffix">
+            .00
+        </label>
+    </div>
+
+    <label>Enter some text
+        <div class="elf-input-group">
+            <input type="text">
+        </div> 
+    </label>
+
+    <br />
+    <br />
+
+    <div class="elf-input-group elf-primary">
+        <input type="text" placeholder="Primary input">
+    </div> 
+
+    <div class="elf-input-group elf-accent">
+        <input type="text" placeholder="Accent input">
+    </div> 
+
+    <br />
+    <br />
+
+    <hr />
+
+    <h2>Textarea</h2>
+
+    <div class="elf-input-group">
+        <textarea></textarea>
+    </div>
+
+    <div class="elf-input-group elf-primary">
+        <textarea></textarea>
+    </div>
+
+    <div class="elf-input-group elf-accent">
+        <textarea></textarea>
+    </div>
+
+    <hr />
+
+    <h2>Buttons</h2>
+    <button class="elf-button">Click here</button>
+
+    <button class="elf-button elf-primary">Click here</button>
+
+    <button class="elf-button elf-accent">Click here</button>
+
+    <br />
+
+    <label>
+        <input type="checkbox" class="elf-checkbox" >
+        Check
+    </label>
+    <br />
+    <label>
+        <input type="checkbox" class="elf-checkbox elf-primary" >
+        Check primary
+    </label>
+    <br />
+    <label>
+        <input type="checkbox" class="elf-checkbox elf-accent" >
+        Check accent
+    </label>
+    <br />
+    
+
+</body>
+</html>

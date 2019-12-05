@@ -1,0 +1,108 @@
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+label{
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    -o-user-select: none;
+    user-select: none;
+    cursor: pointer;
+}
+
+.elf-input-group,
+.elf-button,
+.elf-checkbox {
+    border:solid 1px #afafaf;
+    display: inline-flex;
+    padding:8px;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin:1px;
+}
+
+    .elf-input-group:focus-within,
+    .elf-button:active,
+    .elf-checkbox:checked{
+        border-color:var(--primary-color);
+        border-width:2px;
+        margin:0px;
+    }
+
+    .elf-input-group .elf-input-prefix,
+    .elf-input-group .elf-input-suffix{
+        color:rgb(117, 117, 117);
+        font-weight: bold;
+    }
+        .elf-input-group .elf-input-prefix{
+            margin-right:8px;
+        }
+        .elf-input-group .elf-input-suffix{
+            margin-left:8px;
+        }
+
+    .elf-input-group input, 
+    .elf-input-group textarea{
+        flex:1;
+        border:none;
+        min-width: 1px;
+        font-family: inherit;
+    }
+        .elf-input-group input:focus,
+        .elf-input-group textarea:focus,
+        .elf-button:focus,
+        .elf-checkbox:focus {
+            outline:none;
+        }
+
+    .elf-input-group input[type=number]{
+        text-align: right;
+    }
+
+
+.elf-button {
+    cursor: pointer;
+    background-color:#ffffff;
+}
+    .elf-button.elf-primary,
+    .elf-input-group.elf-primary {
+        border-color:var(--primary-color);
+    }
+
+    .elf-button.elf-accent,
+    .elf-input-group.elf-accent,
+    .elf-checkbox.elf-accent:checked {
+        border-color:var(--accent-color);
+    }
+
+    .elf-button.elf-primary,
+    .elf-checkbox.elf-primary:checked,
+    .elf-checkbox.elf-primary:checked:after  {
+        background-color:var(--primary-color);
+        color:var(--primary-font-color);
+    }
+
+    .elf-button.elf-accent,
+    .elf-checkbox.elf-accent:checked,
+    .elf-checkbox.elf-accent:checked:after {
+        background-color:var(--accent-color);
+        color:var(--accent-font-color);
+    }
+
+.elf-checkbox {
+    -webkit-appearance: none;
+    position: relative;   
+    cursor: pointer;
+}
+    .elf-checkbox:checked:after {
+        content: '\2713';
+        font-size: 12px;
+        position: absolute;
+        top: 0px;
+        left: 3px;
+        color: var(--primary-color);
+        font-weight: bold;
+    }
