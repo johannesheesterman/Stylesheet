@@ -1,0 +1,41 @@
+input[type=radio]{
+    -webkit-appearance: none;
+    appearance: none;
+    padding:8px;
+    border:solid 1px;
+    border-radius: 50%;
+    cursor: pointer;
+    position: relative;
+    width:18px;
+    height:18px;
+
+    &:active, &:focus{
+        outline:none;
+    }
+
+    &:checked{
+       border-color:var(--primary-color);
+
+        &:after{
+            content: "";
+            width: 10px;
+            height: 10px;
+            left: 3px;
+            top: 3px;
+            background-color: var(--primary-color);
+            position: absolute;
+            color: #fff;
+            border-radius: 50%;
+        }
+    }
+
+    &:disabled{
+        background: #f3f2f1;
+        border: 1px solid #a19f9d;  
+        
+        &:after{
+            color:#a19f9d;
+            background-color: #a19f9d;
+        }
+    }
+}

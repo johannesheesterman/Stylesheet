@@ -3,120 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Elfsquad stylesheet showcases</title>
-    <link rel="stylesheet" href="stylesheet.css">
-
+    <title>Document</title>
+    <link rel="stylesheet" href="index.css">
     <style>
-        :root{
-            --primary-color: #3949ab;
-            --accent-color: coral;
-
-            --primary-font-color: #ffffff;
-            --accent-font-color: #000000;
+        .input-fields-section label{
+            display:inline-flex;
+            flex-direction: column;
         }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
-        }
-
     </style>
-    
 </head>
 <body>
 
-    <h2>Input fields</h2>
+    <section>
+        <h2>Buttons</h2>
+        <button>Standard</button>
+        <button class="primary">Primary</button>
+        <button class="accent">Accent</button>
+        <button disabled>Disabled</button>
+        <button disabled class="primary">Disabled primary</button>
+    </section>
 
-    <label>Primary color
-        <div class="elf-input-group">
-            <input type="color">
-        </div> 
-    </label>
-
-    <label>Accent color
-        <div class="elf-input-group">
-            <input type="color">
-        </div> 
-    </label>
-
-    <br />
-    <br />
-
-
-
-    <div class="elf-input-group">
-        <label class="elf-input-prefix">
-            $
+    <section>
+        <h2>Checkbox</h2>
+        <label>
+            <input type="checkbox" />
+            <span>Unchecked checkbox</span>            
         </label>
-        <input type="number" placeholder="Enter value">
-        <label class="elf-input-suffix">
-            .00
+
+        <label>
+            <input type="checkbox" checked />
+            <span>Checked checkbox</span>            
         </label>
-    </div>
 
-    <label>Enter some text
-        <div class="elf-input-group">
-            <input type="text">
-        </div> 
-    </label>
+        <label>
+            <input type="checkbox" disabled />
+            <span>Disabled checkbox</span>            
+        </label>
 
-    <br />
-    <br />
+        <label>
+            <input type="checkbox" checked disabled />
+            <span>Disabled checked checkbox</span>            
+        </label>
+    </section>
 
-    <div class="elf-input-group elf-primary">
-        <input type="text" placeholder="Primary input">
-    </div> 
+    <section>
+        <h2>Radio buttons</h2>
+        
+        <label>
+            <input type="radio" name="radio-group-01" />
+            <span>Unchecked radio</span>            
+        </label>
 
-    <div class="elf-input-group elf-accent">
-        <input type="text" placeholder="Accent input">
-    </div> 
+        <label>
+            <input type="radio" name="radio-group-01" checked />
+            <span>Checked radio</span>            
+        </label>
 
-    <br />
-    <br />
+        <label>
+            <input type="radio" disabled />
+            <span>Disabled radio</span>            
+        </label>
 
-    <hr />
-
-    <h2>Textarea</h2>
-
-    <div class="elf-input-group">
-        <textarea></textarea>
-    </div>
-
-    <div class="elf-input-group elf-primary">
-        <textarea></textarea>
-    </div>
-
-    <div class="elf-input-group elf-accent">
-        <textarea></textarea>
-    </div>
-
-    <hr />
-
-    <h2>Buttons</h2>
-    <button class="elf-button">Click here</button>
-
-    <button class="elf-button elf-primary">Click here</button>
-
-    <button class="elf-button elf-accent">Click here</button>
-
-    <br />
-
-    <label>
-        <input type="checkbox" class="elf-checkbox" >
-        Check
-    </label>
-    <br />
-    <label>
-        <input type="checkbox" class="elf-checkbox elf-primary" >
-        Check primary
-    </label>
-    <br />
-    <label>
-        <input type="checkbox" class="elf-checkbox elf-accent" >
-        Check accent
-    </label>
-    <br />
+        <label>
+            <input type="radio" checked disabled />
+            <span>Disabled checked radio</span>            
+        </label>
+    </section>
     
+    <section class="input-fields-section">
+        <h2>Input fields</h2>
+        <label>
+            Standard
+            <input type="text" />
+        </label>
+    
+        <label>
+            With placeholder
+            <input placeholder="Please enter text here" />
+        </label>
 
+        <label>
+            Disabled
+            <input disabled value="Disabled field" />
+        </label>
+
+        <hr />
+        <h2>Texarea</h2>
+        <textarea></textarea>
+    </section>
+    
 </body>
 </html>

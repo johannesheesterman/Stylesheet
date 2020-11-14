@@ -1,0 +1,17 @@
+input:not([type=checkbox]), textarea{
+    background-color: rgb(255,255,255);
+    font-family: inherit;
+    padding: 6px 16px;
+    border:solid 1px;
+    border-radius: 2px;
+
+    &:active:not(:disabled), &:focus:not(:disabled){
+        outline: auto 1px var(--primary-color);
+    }
+
+    &:disabled{
+        background:rgb(243, 242, 241);
+        border:1px solid rgb(161, 159, 157);
+        color:rgb(161, 159, 157);
+    }
+}
