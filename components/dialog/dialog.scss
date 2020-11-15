@@ -19,4 +19,13 @@ dialog{
         left: 0px;
         right: 0px;
     }
+
+    .dialog-actions{
+        display: flex;
+        justify-content: flex-end;
+
+        button{
+            margin-left:8px;
+        }
+    }
 }

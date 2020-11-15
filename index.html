@@ -453,11 +453,17 @@
         </p>
         <button id="open-dialog-button" onclick="openDialog()">Open Modal</button>
 
-        <dialog id="sample-dialog">
+        <dialog id="sample-dialog" style="max-width:620px">
             <h2>Lorem Ipsum</h2>
+
             <p>
                 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas lorem nulla, malesuada ut sagittis sit amet, vulputate in leo. Maecenas vulputate congue sapien eu tincidunt. Etiam eu sem turpis. Fusce tempor sagittis nunc, ut interdum ipsum vestibulum non. Proin dolor elit, aliquam eget tincidunt non, vestibulum ut turpis. In hac habitasse platea dictumst. In a odio eget enim porttitor maximus. Aliquam nulla nibh, ullamcorper aliquam placerat eu, viverra et dui. Phasellus ex lectus, maximus in mollis ac, luctus vel eros. Vivamus ultrices, turpis sed malesuada gravida, eros ipsum venenatis elit, et volutpat eros dui et ante. Quisque ultricies mi nec leo ultricies mollis. Vivamus egestas volutpat lacinia. Quisque pharetra eleifend efficitur.
             </p>
+
+            <div class="dialog-actions">
+                <button class="primary" onclick="closeDialog()">Submit</button>
+                <button onclick="closeDialog()">Close</button>                
+            </div>            
         </dialog>
 
         <script>
@@ -466,12 +472,16 @@
             var sampleDialog = document.getElementById('sample-dialog');
 
             sampleDialog.addEventListener("click", event => {
-                const rect = dialog.getBoundingClientRect();
+                const rect = sampleDialog.getBoundingClientRect();
                 if (event.clientY < rect.top || event.clientY > rect.bottom ||
                     event.clientX < rect.left || event.clientX > rect.right) {
-                    dialog.close();
+                    closeDialog();
                 }
             });
+
+            function closeDialog(){
+                sampleDialog.close();
+            }
 
             function openDialog(){
                 sampleDialog.showModal();

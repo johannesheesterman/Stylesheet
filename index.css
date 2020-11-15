@@ -93,6 +93,13 @@ dialog::backdrop, dialog + .backdrop {
   left: 0px;
   right: 0px;
 }
+dialog .dialog-actions {
+  display: flex;
+  justify-content: flex-end;
+}
+dialog .dialog-actions button {
+  margin-left: 8px;
+}
 
 h1, h2, h3, h4, h5, h6 {
   margin-top: 0px;
