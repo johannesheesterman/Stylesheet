@@ -1,0 +1,22 @@
+dialog{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-50%) translateY(-50%);
+    transform: translateX(-50%) translateY(-50%);
+
+    max-width:80vw;
+    border:none;
+    border-radius: 2px;
+    border-top: solid 4px var(--primary-color);
+    box-shadow: rgba(0, 0, 0, 0.22) 0px 25.6px 57.6px 0px, rgba(0, 0, 0, 0.18) 0px 4.8px 14.4px 0px;
+
+    &::backdrop, + .backdrop{
+        background: rgba(0,0,0,0.4);
+        position: fixed;
+        top: 0px;
+        bottom: 0px;
+        left: 0px;
+        right: 0px;
+    }
+}
