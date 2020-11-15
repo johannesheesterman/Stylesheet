@@ -167,6 +167,55 @@ section {
     opacity: 1;
   }
 }
+.spinner {
+  color: var(--primary-color);
+  display: inline-flex;
+  align-items: center;
+}
+.spinner::before {
+  content: "";
+  width: 4rem;
+  height: 4rem;
+  display: inline-block;
+  border: 3px solid #f3f2f1;
+  border-top-color: var(--primary-color);
+  border-radius: 50%;
+  animation: rotation 1.4s ease infinite;
+}
+.spinner span {
+  margin-left: 12px;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+table {
+  text-align: left;
+  position: relative;
+  border-collapse: collapse;
+  width: 100%;
+}
+table tr {
+  border-bottom: 1px solid #f3f2f1;
+}
+table tr:hover {
+  background-color: #f3f2f1;
+}
+table th {
+  background: #fff;
+  position: sticky;
+  top: 0;
+  font-weight: bold;
+}
+table th, table td {
+  padding: 8px;
+}
+
 :root {
   --primary-color: rgb(0, 120, 212);
   --primary-font-color: #fff;

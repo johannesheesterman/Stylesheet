@@ -1,0 +1,31 @@
+
+.spinner{
+    // Common styles
+    color: var(--primary-color);
+    display: inline-flex;
+    align-items: center;
+ 
+        &::before{
+            content: '';
+            width: 4rem;
+            height: 4rem;
+            display: inline-block;
+            border: 3px solid rgb(243, 242, 241);
+            border-top-color: var(--primary-color);
+            border-radius: 50%;
+            animation: rotation 1.4s ease infinite;
+        }
+
+        span{
+            margin-left:12px;
+        }
+}
+
+@keyframes rotation{
+    from{
+      transform: rotate(0deg);
+    }
+    to{
+      transform: rotate(360deg);
+    }
+  }

@@ -1,0 +1,25 @@
+table{
+    text-align: left;
+    position: relative;
+    border-collapse: collapse; 
+    width:100%;
+
+    tr{
+        border-bottom: 1px solid rgb(243, 242, 241);
+        
+        &:hover{
+            background-color: rgb(243, 242, 241);
+        }
+    }
+
+    th{
+        background:#fff;
+        position: sticky;
+        top: 0; 
+        font-weight: bold;
+    }
+    
+    th,td{
+        padding:8px;
+    }
+}
